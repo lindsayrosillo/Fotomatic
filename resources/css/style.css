@@ -86,8 +86,32 @@ header .icon {
 header .mobile {
   display: none;
 }
-
-@media only screen and (max-width: 760px) {
+header .tablet  {
+  display: none;
+}
+@media only screen and (min-width: 450px) and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }
+  header .tablet {
+    display: flex;
+    width: %50;
+  }
+  .tablet .logo{
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  }
+  .tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .tablet ul li a {
+    font-size: 0.65rem;
+  }
+}
+@media only screen and (max-width: 450px) {
   header .desktop {
     display: none;
   }
@@ -189,7 +213,6 @@ header .mobile {
   }
 
   #sign-up-cta {
-    position: static;
     width: auto;
     height: auto;
     background-color: transparent;
@@ -198,6 +221,11 @@ header .mobile {
 
   #sign-up-cta .content {
     margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+  #sign-up-cta .header {
+    justify-content: center;
   }
 
   #sign-up-cta .email {
@@ -206,6 +234,7 @@ header .mobile {
 
   #sign-up-cta h1 {
     font-size: 3.125rem;
+    vertical-align: baseline;
   }
 
   #sign-up-cta h2 {
@@ -268,11 +297,10 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   #features-section {
-    justify-content: center;
-    width: 90%;
+
   }
   .feature  {
-      flex: auto;
+
   }
 }
 
@@ -290,7 +318,7 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 450px) {
   #features-section {
     flex-flow: column;
     padding: 0;
@@ -392,8 +420,10 @@ header .mobile {
   #quotes-section .content {
     padding: 1.875rem 0.625rem 0rem 0.625rem;
     display: flex;
-    padding-bottom: 0rem;
-
+    align-items: center;
+  }
+  #quotes-section {
+    height: 8rem;
   }
 
   #quotes-section .quote {
