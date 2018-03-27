@@ -95,7 +95,7 @@ header .tablet  {
   }
   header .tablet {
     display: flex;
-    width: %50;
+    justify-content: space-around;
   }
   .tablet .logo{
   font-family: 'Rubik', sans-serif;
@@ -105,10 +105,13 @@ header .tablet  {
   .tablet {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    height: 1rem;
   }
-  .tablet ul li a {
-    font-size: 0.65rem;
+  header .tablet .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -217,6 +220,7 @@ header .tablet  {
     height: auto;
     background-color: transparent;
     border: none;
+    margin-left: 0;
   }
 
   #sign-up-cta .content {
@@ -224,6 +228,7 @@ header .tablet  {
     display: flex;
     justify-content: center;
   }
+
   #sign-up-cta .header {
     justify-content: center;
   }
@@ -243,8 +248,15 @@ header .tablet  {
 }
 
 @media only screen and (max-width: 450px) {
-  #sign-up-section {
+  #sign-up-section.banner {
     height: 20rem;
+    max-width: 100%;
+    background-position: right;
+  }
+
+  #sign-up-cta {
+    margin-left: 0;
+    padding: 0;
   }
 
   #sign-up-cta h1 {
@@ -322,6 +334,15 @@ header .tablet  {
   #features-section {
     flex-flow: column;
     padding: 0;
+  }
+
+  #features-section .top {
+    background-color: #d4d5d6;
+  }
+
+  #image-container {
+    padding-top: 1rem;
+    padding-bottom: 1.8rem;
   }
 
   .feature {
@@ -438,11 +459,28 @@ header .tablet  {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  #quotes-section .content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: auto;
+  }
+  #quotes-section .quote-citation {
+    display: block;
+    padding-bottom: 1rem;
+  }
+  #quotes-section {
+    height: auto;
+  }
+}
+
 /* Footer */
 
 footer {
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
+  height: auto;
 }
 
 footer .content {
@@ -455,11 +493,14 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
   footer .content {
     font-family: "Roboto-Regular" sans-serif;
     font-size: .75rem;
-    padding: 0rem;
-    margin: 0rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  footer {
+    margin: 0;
   }
 }
